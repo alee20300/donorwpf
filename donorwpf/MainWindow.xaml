@@ -5,8 +5,60 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:donorwpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Blood Bank" Height="450" Width="800">
+
+    <Grid >
+        <StackPanel>
+            <local:UserControl1 Margin="10" Height="65"></local:UserControl1>
+            <Grid Margin="5" Background="white">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" ></ColumnDefinition>
+                    <ColumnDefinition Width="3*" ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="29*"/>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Column="2">
+                        <TextBlock Text="Patient Details" Background="White" Opacity="100"  Margin="35,2,0,0" ></TextBlock>
+                        <Rectangle Stroke="Black" StrokeThickness=".5" Margin="5" RadiusX="10" RadiusY="10"></Rectangle>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBox Grid.Column="0 " Grid.Row="0" Margin="5"></TextBox>
+                            <TextBox Grid.Column="1 " Grid.Row="0" Margin="5"></TextBox>
+                            <TextBox Grid.Column="0 " Grid.Row="1" Margin="5"></TextBox>
+                            <TextBox Grid.Column="1 " Grid.Row="1" Margin="5"></TextBox>
+                            <TextBox Grid.Column="0 " Grid.Row="2" Margin="5"></TextBox>
+                            <TextBox Grid.Column="1 " Grid.Row="2" Margin="5"></TextBox>
+
+                        </Grid>
+                    </StackPanel>
+                    
+                    <Rectangle Grid.Row="2" Height="120" Stroke="Black" StrokeThickness=".5" Margin="5" RadiusX="10" RadiusY="10" Grid.RowSpan="1">
+
+                    </Rectangle>
+                </Grid>
+
+                <StackPanel Grid.Column="1">
+                    <local:bbkControl Margin="5" Grid.Column="1"></local:bbkControl>
+                    <DataGrid   HorizontalAlignment="Left" Height="120" Margin="4,10,0,10" Width="438"/>
+
+                </StackPanel>
+
+            </Grid>
+
+        </StackPanel>
+
     </Grid>
 </Window>
